@@ -31,3 +31,36 @@
 // }
 
 // myFunction();
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//*****************Primitive**************
+// 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
+
+
+
+//stack (primitive)  ,Heap(None-primitive)
+
+// let myName="Yash"               // in primitive type stack memory assigned to the variable
+// let anotherName=myName          //so changed happen in copy not in original value
+// anotherName="Daka"
+// console.log(myName);
+// console.log(anotherName);
+
+//******************Reference (Non-Primitive)********************
+// Array, Objects, Functions
+
+// let userOne={
+//     emil : "user@mail.com",
+//     upi : "46321111@ybl"   
+//}                                  
+                                     // in none-primitive type heap memory assigned
+                                    // passiging original value not a copy
+                                  // so change happen in both orignal and another assigned varible
+
+// let userTwo=userOne
+
+// userTwo.emil="yash@mail.com"
+
+// console.log(userOne);
+// console.log(userTwo);
