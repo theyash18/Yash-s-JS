@@ -5,14 +5,13 @@ const balance = new Number(100)
 // console.log(balance);
 
 // console.log(balance.toString().length);
-// console.log(balance.toFixed(1));
+// console.log(balance.toFixed(2)); //100.00
 
-const otherNumber = 123.8966
+//const otherNumber = 123.8266
+// console.log(otherNumber.toPrecision(4)); // how much number want after point
 
-// console.log(otherNumber.toPrecision(4));
-
-const hundreds = 1000000
-// console.log(hundreds.toLocaleString('en-IN'));
+//const hundreds = 1000000
+// console.log(hundreds.toLocaleString('en-IN')); //10,00,000
 
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
@@ -33,5 +32,5 @@ const max = 20
 
 // console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
-console.log(Math.floor(Math.random()))
+console.log(Math.floor(Math.random()*(max-min+1))+min)
 
