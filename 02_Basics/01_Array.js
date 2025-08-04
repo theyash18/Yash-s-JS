@@ -31,10 +31,10 @@ const myArry1 =new Array(1,2,3,4,5) // aanother way of declare array
 //  myArry.shift()
 // console.log(myArry);
 
-// check that element avialable or not in array
+// include method check that element avialable or not in array
 //console.log(myArry.includes(2)); 
 
-// check theindex of the array variable
+// check index of the array variable
 //console.log(myArry.indexOf(3));
 
 // join is useed to = convert newArray in string format
