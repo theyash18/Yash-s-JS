@@ -1,0 +1,41 @@
+let no1=5
+let no2=5
+function add(val1,val2){
+    let total=val1+val2
+    return total    
+}
+let rs1 = add(no1,no2)
+let rd2 = add(5,5)
+
+1> Global Exectiom(Phase) ---> Alocating THIS
+            |
+            |
+2>     Memoray Phase (Only Alocate Memoray For Defined Variable)
+
+        no1=undifined
+        no2=undifined
+        add=Defenation (function ma Defenation Pass thay
+                       Like This Is -->  let total=val1+val2;return total)
+        rs1=undifined
+        rs1=undifined
+            |
+            |
+3>     Exectiom Phase (Assigning thaa value)
+          no1=5
+          no2=5
+            | this is new enviment which is creted for function call LINE7
+            |      -----------------------------------------
+          add---->|New Variable Inverment + Exectiom Thread |--------------|
+                  |  1>Memoray Phase     2>Exectiom Phase   |              |
+                  -------------------------------------------              |
+                        LINE7                                              |
+                     no1=undifined       no1=5                             |
+                     no2=undifined       no2=5                             |
+                     total=undifined     total=10                          |
+        after that value of total  Assigning to THIS means Phase 1         |
+        and then the new enviment which is creted for thh add function <---|
+        Exectiom it is deleted
+
+the same prcess is also creted for LINE8(add(5,5)) function call
+same another enviment creted and passiging threw Memoray Phase and Exectiom Phase
+and then send value to this and deleted new enviment. 
