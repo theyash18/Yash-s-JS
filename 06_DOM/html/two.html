@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+                background-color: #080808;
+                color: rgb(238, 247, 245);
+        }
+        .parent h1{
+            color: aliceblue;
+        }
+        
+        /* http://127.0.0.1:5501/06_DOM/html/two.html */
+    </style>
+</head>
+<body>
+    <div  class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thuresday</div>    
+    </div> 
+</body>
+
+<script>
+ const parent = document.querySelector('.parent')
+// console.log(parent);
+// console.log(parent.children[3].innerHTML);
+
+for (let i = 0; i < parent.children.length; i++) {
+    //console.log(parent.children[i].innerHTML);    
+}
+
+parent.children[1].style.color="orange"
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+
+const dayone = document.querySelector('.day');
+// console.log(dayone);
+// console.log(dayone.parentElement);
+// console.log(dayone.nextElementSibling);
+
+// ***NODELIST***
+console.log("NODE :",parent.childNodes);
+
+</script>
+</html>

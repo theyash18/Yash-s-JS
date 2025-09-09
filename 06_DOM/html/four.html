@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash's JS</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<!-- Adding Value in created element
+     with use of function -->
+<script>
+
+//*************** INSERT *****************
+
+ /* when adding value whith innerHTML vale 
+    travel from whole tree and then adding at 
+    last position(trivers whole tree)*/    
+
+    function addlangauge(lanName){
+       const li = document.createElement('li')
+       li.innerHTML=`${lanName}` 
+       document.querySelector('.language').appendChild(li)    
+    }
+    addlangauge("Java")
+    addlangauge("python")
+    
+/* when use craeteTextNode and adding value value 
+   directly adding at the last position no need
+   of travel whole tree so that is optimal
+   way to adding value it is batter to use*/
+
+    function optimaladd(langName){
+        const li = document.createElement('li');      
+        li.appendChild( document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }   
+    optimaladd("NodeJS")
+
+// ************* EDIT *************
+
+const second = document.querySelector("li:nth-child(3)")
+// console.log(second);
+// second.innerHTML="MoJo"  
+// second.outerHTML='<li>C++</li>'
+const newlin = document.createElement('li')
+newlin.textContent ="C++"
+// second.replaceWith(newlin)
+  
+
+// ************* REMOVE ***************
+
+const last1 = document.querySelector('li:last-child')
+console.log(last1);
+// last1.remove()
+</script>
+
+</html>
