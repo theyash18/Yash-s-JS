@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+
+   // setTimeout(function(){console.log("Yash");},2000)
+
+    const sayYash =function(){
+        console.log("Yash");
+    }
+    setTimeout(sayYash,200000)
+
+    // setTimeout(function(){document.querySelector('H1').innerHTML
+    // = "Js best series"},2000)
+
+    const changeH1 = function(){
+        document.querySelector('H1').innerHTML
+           = "Js best series"
+    }
+    setTimeout(changeH1,100000)
+
+    // for stopping the setTimeout with using clearTimeout()  
+    const chageMe = setTimeout(changeH1,5000) 
+
+    //clearTimeout(chageMe) // this mathod directly stop the execution of settimeout function
+                            // but we want when we click on STOP button then stop
+
+    // when we apply this mathod on event its work completely as we want
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(chageMe)
+        console.log('STOPPED'); // open consol for show this line
+    })
+
+    
+  
+
+
+
+</script>
+</html>

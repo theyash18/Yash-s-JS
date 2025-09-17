@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur JavaScript </h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    
+</body>
+<script>
+  
+// setInterval function repete execution after given time continousely
+
+// Not good Lokk
+setInterval(function(){
+  //  console.log('Yash');
+},1000)
+
+
+// we use this type of writting
+const sayName = function(){
+   // console.log('Yash');
+}
+setInterval(sayName,1000)
+
+// we can also pass parameter in setInterval
+const sayName1 = function(str){
+   // console.log('Hi',str);
+}
+setInterval(sayName1,1000,"Yash")
+
+// for stopping setInterval() use function clearinterval()
+//this mathod directly stop the execution of setInterval()
+
+
+// NOTE : Pass referanca of setInterval in clearInterva
+const stop = setInterval(sayName,1000)
+//clearInterval(stop)
+
+
+// when i click on start start printing and when click on stop sop priinting
+let intervalID;
+const Me = function(){
+        console.log("Yash");
+    }
+
+document.querySelector('#start').addEventListener
+('click',function(){ 
+    intervalID = setInterval(Me,1000)
+})
+
+document.querySelector('#stop').addEventListener('click',
+function(){
+        clearInterval(intervalID)
+        console.log('STOPPED'); // open consol for show this line
+    }) 
+
+
+   
+   
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+     
+  0  &nbsp;&nbsp;&nbsp;UNSENT Client has been created. open() not calles yet.</br>
+  1  &nbsp;&nbsp;&nbsp;OPENED open has been called.</br>
+  2  &nbsp;&nbsp;&nbsp;HADERS_RECEIVED   send() has been called, and haders and status are avilable</br>
+  3  &nbsp;&nbsp;&nbsp;LOADING Downlloading; responseText holds partial data.</br>
+  5  &nbsp;&nbsp;&nbsp;DONE    The operation has been complated.
+
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestURL);
+   // console.log('HEAR');
+   xhr.onreadystatechange = function(){
+    console.log(xhr.readyState);
+   }
+   
+    xhr.send();
+</script>
+</html>

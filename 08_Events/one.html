@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventst</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="Images">
+            <li><h1 id="rmv1">Remove1</h1></li>
+            <li><h1 id="rmv2">Remove2</h1></li>
+            <li><h1 id="rmv3">Remove3</h1></li>
+            <li><h1 id="rmv4">Remove4</h1></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    /* This approch provide less fecturs than addEventListuner*/
+    // document.getElementById('rmv3').onclick=function(){
+    //     alert("Clicked")
+    // }
+
+    /*This approch provide more feactures than onclick
+    Other Approches: attachEvent()
+                     jQuery - on*/
+//      document.querySelector('#Images').addEventListener
+//      ('click',function(e){
+
+//         if (e.target.tagName === 'H1'){
+//          console.log(e.target.tagName); // return tag name hear:H1
+//          let rmv = e.target.parentNode;  
+//          rmv.remove();
+//          // rmv.parentNode.removeChild(rmv);
+//         }  
+      
+//        console.log(e.target.parentNode); // Return <li></li>
+//   });
+  
+// document.querySelector('#Images').addEventListener
+//      ('click',function(e){
+//         console.log(e.timeStamp);
+//      })
+
+/*type,timestemp,preventDefault     
+  target,toElement,srcElemnet,currentTargt
+  clientx, clientY, screenX, screenY
+  altkey,ctrlkry,shiftkey,keyCode*/
+
+/*Event propregation
+    bubbeling event -> False(default)(Bottom to Top)
+    capcturing mode ->true*/
+
+//  document.querySelector('#Images').addEventListener
+//      ('click',function(e){
+//         console.log("Clicked inside the ul");
+//      })
+   
+//      document.querySelector('h1').addEventListener
+//      ('click',function(e){
+//         console.log("h1 clicked");
+//         e.stopPropagation(); // stop bubbleing
+//      })
+   
+   
+ document.querySelector('#Images').addEventListener
+     ('click',function(e){
+        console.log("Clicked inside the ul");
+     },true)
+   
+     document.querySelector('h1').addEventListener
+     ('click',function(e){
+        console.log("h1 clicked");
+     },true)
+   
+</script>
+</html>
